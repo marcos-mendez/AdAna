@@ -23,3 +23,10 @@ class Competencia(models.Model):
 
     def __str__(self):
         return f"{self.empresa.nombre} competidor: {self.competidor.nombre}"
+
+#This model creates the market where companies can work
+class Mercado(models.Model):
+    mercado = models.CharField(max_length=200)
+    
+    def __str__(self):
+        return self.mercado
